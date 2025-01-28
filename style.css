@@ -846,11 +846,14 @@ section{
         opacity: 1;
     }
 }
-
+.menu-icon {
+    display: none;
+}
 @media (max-width: 500px) {
     .navbar {
         display: none;
     }
+
     .menu-icon {
         display: block;
         cursor: pointer;
@@ -888,4 +891,38 @@ section{
         background: #0ef;
         color: #081b29;
     }
+}
+
+.show{
+    animation: shows both;
+    animation-timeline: view(60% 0%);
+}
+@keyframes shows{
+    0%{
+        opacity: 0.5;
+        transform: translateY(100px) scale(0.5);
+
+    }
+    80%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #04041a; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0ef; 
+    border-radius: 10px;
+    border: 3px solid #04041a; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #00c8ff; 
 }
