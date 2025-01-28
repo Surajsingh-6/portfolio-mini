@@ -384,13 +384,13 @@ section{
     width: 90%;
 }
 .progress-line.css span{
-    width: 65%;
+    width: 80%;
 }
 .progress-line.javascript span{
-    width: 75%;
+    width: 70%;
 }
 .progress-line.python span{
-    width: 50%;
+    width: 91%;
 }
 .progress-line.react span{
     width: 80%;
@@ -412,19 +412,19 @@ section{
     transform: translate(20px,-5px);
 }
 .progress-line.css span::after{
-    content: "85%";
-    transform: translate(20px,-5px);
-}
-.progress-line.javascript span::after{
-    content: "95%";
-    transform: translate(20px,-5px);
-}
-.progress-line.python span::after{
     content: "80%";
     transform: translate(20px,-5px);
 }
-.progress-line.react span::after{
+.progress-line.javascript span::after{
+    content: "70%";
+    transform: translate(20px,-5px);
+}
+.progress-line.python span::after{
     content: "90%";
+    transform: translate(20px,-5px);
+}
+.progress-line.react span::after{
+    content: "80%";
     transform: translate(20px,-5px);
 }
 .progress-line span::after{
@@ -727,6 +727,11 @@ section{
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
+@media (max-width: 500px){
+    .contact-icons {
+        margin: 0 0 0 3rem; 
+    }
+}
 .contact-icons i:hover{
     background: #0ef;
     color: #000;
@@ -734,6 +739,12 @@ section{
 }
 .contact-form form{
     position: relative;
+}
+@media (max-width: 500px){
+    .contact-form form{
+        padding-left: 20px;
+        margin-left: 10px;
+    }
 }
 .contact-form form input,form textarea{
     border: none;
@@ -833,5 +844,48 @@ section{
     100%{
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .menu-icon.active + .navbar {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: #001120;
+        backdrop-filter: blur(10px);
+        text-align: center;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .navbar a {
+        display: block;
+        padding: 10px;
+        font-size: 20px;
+        color:#0ef;
+        text-decoration: none;
+        transition: .3s;
+    }
+    .navbar a:hover {
+        background: #0ef;
+        color: #081b29;
     }
 }
