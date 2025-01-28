@@ -23,6 +23,16 @@ body{
     align-items: center;
     z-index: 100;
 }
+@media (max-width: 500px){
+    .header{
+        text-align: left;
+        display: block;
+        padding: 20px 5%;
+    }
+    .navbar{
+        display: none;
+    }
+}
 .logo{
     position: relative;
     font-size: 35px;
@@ -143,13 +153,25 @@ body{
     align-items: center;
     gap: 1.5rem;
 }
+@media (max-width: 500px){
+    .about{
+        display: block;
+        padding: 10px;
+        /* padding-left: 1rem; */
+    }
+    
+    .about-text {
+        padding-left: 0rem;
+    }
+    .about-text {
+        margin: 0 0 0 3rem;
+    }
+}
 .about-img img{
-    /* padding-bottom: 20%; */
     max-width: 630px;
     width: 20rem;
     border-radius: 50%;
     outline: #0ef solid 4px;
-    /* margin-left: 5rem; */
 }
 .about-img{
     height: 100%;
@@ -195,17 +217,34 @@ body{
     font-size: 60px;
     padding-bottom: 70px;
 }
+@media (max-width: 500px){
+    .sub-title{
+        font-size: 50px;
+        padding: 6rem 0 4rem 0;
+    }
+}
 .sub-title span{
     color: #0ef;
 }
 .container{
     padding: 90px;
 }
+@media (max-width: 500px){
+    .container{
+        padding: 10px;
+    }
+}
 .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
+}
+@media (max-width: 500px){
+    .services-list{
+        margin-top: 0px;
+        padding: 15px;
+    }
 }
 .services-list div{
     background-color: transparent;
@@ -218,6 +257,12 @@ body{
     box-shadow: 1px 1px 20px #012290f7,
     1px 1px 40px #0053b8f7;
     
+}
+@media (max-width: 500px){
+    .services-list div{
+        padding: 30px;
+        font-size: 15px;
+    }
 }
 .services-list div i{
     font-size: 50px;
@@ -268,12 +313,27 @@ section{
     padding: 75px 90px;
     margin-left: 120px;
 }
+@media (max-width: 500px){
+    .container1{
+        width: 100%;
+        padding: 10px 10px 10px 40px;
+        margin-left: 0px;
+        margin-bottom: 50px;
+    }
+}
 .heading1{
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
+}
+@media (max-width: 500px){
+    .heading1{
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
 }
 .bar{
     font-size: 23px;
@@ -519,6 +579,15 @@ section{
     display: block;
     transition: transform 0.5s;
 }
+@media (max-width: 500px){
+    .row img{
+        aspect-ratio: 1/1;
+        height: auto;
+        width: 90%;
+        padding: auto;
+        margin: auto;
+    }
+}
 .layer{
     width: 100%;
     height: 0;
@@ -535,6 +604,22 @@ section{
     text-align: center;
     padding: 0 40px;
     transition: height 0.5s;
+}
+@media (max-width: 500px){
+    .layer{
+        padding: 0 10px;
+        
+    }
+    .layer h5{
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+    .layer p{
+        font-size: 5px;
+        line-height: 0;
+        display: none;
+    }
+
 }
 .layer h5{
     color: #fff;
@@ -574,6 +659,15 @@ section{
     gap: 3rem;
     padding-left: 10rem;
     margin-top: 130px;
+}
+@media (max-width: 500px){
+    .contact{
+        display: block;
+        padding-left: 15px;
+    }
+    .contact-text h2{
+        font-size: 60px !important;
+    }
 }
 .contact-text h2{
     font-size: 90px;
